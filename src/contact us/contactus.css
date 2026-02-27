@@ -1,0 +1,232 @@
+/* Variables para colores */
+:root {
+    --color-bg: #111;
+    --color-hover: rgb(182, 191, 82);
+    --color-white: #fff;
+    --color-border: #333;
+}
+
+/* Reset general */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, header {
+    margin: 0;
+    padding: 0;
+    font-family: "barlow";
+}
+
+body {
+    margin-top: 60px; /* Deja espacio para el nav fijo */
+}
+
+main {
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+/* FORMULARIO */
+.formulario__box {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1300px;
+    margin: auto;
+    padding-top: 30px;
+}
+
+
+.contact__info, .form__container {
+    max-width: 78%; /* Width of the containers */
+    box-sizing: border-box;
+}
+
+.contact__info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px;
+    padding-bottom: 200px;
+    margin: auto;
+}
+
+.ul__contact {
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 0;
+    margin: 0;
+    font-size: 2.2em;
+    font-weight: bold;
+    .material-symbols-outlined {
+        font-size: 2.8rem;
+        color: #89a746;
+        gap: 30px;
+    }
+}
+
+.ul__contact li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+    font-size: 0.8em;
+    font-weight:100;
+    color: #333;
+    color:#89a746;
+}
+
+.ul__contact a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.ul__contact a:hover{
+    text-decoration: color;
+    color: black;
+}
+
+
+/* FORMULARIO */
+form {
+    color: #000000;
+    padding: 44px 40px;
+    max-width: 100%;
+    height: 100%;
+    align-items: center;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 10%;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 { 
+    font-style: italic;
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 6px 0;
+    border: none;
+    padding: 16px 20px;
+    color: #000000;
+    background-color: #eee;
+    font: 1.3em sans-serif;
+}
+
+fieldset {
+    margin: 20px 0;
+    border: none;
+}
+
+legend {
+    padding: auto;
+    font: 1.7em sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+form > button {
+    background-color: #222; /* Fondo negro */
+    color: white; /* Texto blanco */
+    padding: 16px 20px;
+    margin-top: 40px;
+    font-size: 1.4em;
+    font-family: sans-serif;
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+::placeholder {
+    color: #bbb;
+}
+
+form > button:hover {
+    background-color: rgb(147, 171, 84); /* Cambio de color al pasar el cursor */
+    font-size: 1.6em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .formulario__box {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .contact__info,
+    .form__container {
+        max-width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+    
+    .form__container {
+        order: -1; /* Pone el formulario primero */
+    }
+    
+    .contact__info {
+        order: 1;
+        margin: auto;
+    }
+
+    .ul__contact {
+        font-size: 1.5em;
+    }
+
+    .ul__contact li {
+        font-size: 1em;
+    }
+
+    h1.banner__title {
+        font-size: 1.4em;
+    }
+
+    h2.banner__subtitle {
+        font-size: 1em;
+    }
+
+    .carousel__item img {
+        width: 100%;
+        height: auto;
+    }
+    .material-symbols-outlined {
+        font-size: 5rem;
+        color: #89a746;
+        gap: 30px;
+    }
+}
+
+
+/* HELP BUTTON */
+
+.help-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #222;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 12px 18px;
+    border: 1px solid #89a746;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.help-button:hover {
+    background-color: rgb(118, 138, 47);
+    transform: scale(1.05);
+    color: #ffffff;
+}
+
